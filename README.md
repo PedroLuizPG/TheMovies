@@ -20,7 +20,7 @@ Amantes de cinema que desejam uma interface simples e funcional para explorar fi
 
 1. **Home:**
    - Exibe uma lista de filmes obtidos pela API.
-   - Permite filtrar filmes por gênero.
+   - Permite filtrar a busca por filmes ou series.
    - Inclui barra de pesquisa para buscar filmes pelo nome.
 2. **Filme:**
    - Exibe todos os detalhes de um filme selecionado, incluindo:
@@ -93,7 +93,7 @@ Amantes de cinema que desejam uma interface simples e funcional para explorar fi
 - React.js.
 - React Router DOM.
 - Axios.
-- CSS para estilização (ou frameworks como Tailwind CSS/Bootstrap).
+- CSS para estilização.
 - react-toastify.
 - react-loading-indicators.
 
@@ -111,7 +111,7 @@ Amantes de cinema que desejam uma interface simples e funcional para explorar fi
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/site-filmes-react.git
+   git clone git@github.com:PedroLuizPG/TheMovies.git
 
 2. Instale as dependências:
     yarn add
