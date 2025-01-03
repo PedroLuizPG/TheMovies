@@ -111,7 +111,7 @@ Amantes de cinema que desejam uma interface simples e funcional para explorar fi
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/site-filmes-react.git
+   git clone git@github.com:PedroLuizPG/TheMovies.git
 
 2. Instale as dependências:
     yarn add
