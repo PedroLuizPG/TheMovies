@@ -116,11 +116,12 @@ Amantes de cinema que desejam uma interface simples e funcional para explorar fi
    git clone git@github.com:PedroLuizPG/TheMovies.git
 
 2. Instale as dependências:
+   ```bash
     yarn add
 
-3. Configure a API:
+4. Configure a API:
     -Crie uma conta no TMDB e obtenha sua chave de API.
     -Substitua a chave de API no arquivo de configuração do projeto.
     
-4. Inicie o servidor de desenvolvimento:
+5. Inicie o servidor de desenvolvimento:
     yarn start
