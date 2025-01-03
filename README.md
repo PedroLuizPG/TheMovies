@@ -120,8 +120,10 @@ Amantes de cinema que desejam uma interface simples e funcional para explorar fi
     yarn add
 
 4. Configure a API:
-    -Crie uma conta no TMDB e obtenha sua chave de API.
-    -Substitua a chave de API no arquivo de configuração do projeto.
+   ```
+   - Crie uma conta no TMDB e obtenha sua chave de API.
+   - Substitua a chave de API no arquivo de configuração do projeto.
     
-5. Inicie o servidor de desenvolvimento:
+6. Inicie o servidor de desenvolvimento:
+   ```bash
     yarn start
