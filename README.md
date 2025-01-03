@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# **Site de Filmes com React**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## **Objetivo**
 
-In the project directory, you can run:
+Criar um site que permita aos usuários explorar uma lista de filmes obtida a partir de uma API externa. O site possibilitará filtrar filmes por gênero ou pesquisar pelo nome, visualizar detalhes de filmes específicos e salvar filmes favoritos no armazenamento local (Local Storage).
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Público-Alvo**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Amantes de cinema que desejam uma interface simples e funcional para explorar filmes e criar uma lista personalizada de favoritos.
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Funcionalidades Principais**
 
-### `yarn build`
+### **Páginas e Rotas**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Home:**
+   - Exibe uma lista de filmes obtidos pela API.
+   - Permite filtrar filmes por gênero.
+   - Inclui barra de pesquisa para buscar filmes pelo nome.
+2. **Filme:**
+   - Exibe todos os detalhes de um filme selecionado, incluindo:
+     - Título.
+     - Descrição.
+     - Nota.
+     - Data de lançamento.
+   - Botão para adicionar o filme à lista de favoritos.
+3. **Favoritos:**
+   - Lista todos os filmes salvos pelo usuário no Local Storage.
+   - Permite excluir filmes da lista de favoritos.
+   - Links para acessar os detalhes de cada filme favorito.
+4. **Erro:**
+   - Página exibida para rotas não encontradas com uma mensagem amigável e opção de retorno à home.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Funcionalidades Específicas**
 
-### `yarn eject`
+1. **Filtragem e Pesquisa:**
+   - Na página Home:
+     - Dropdown ou botões para selecionar gêneros.
+     - Barra de pesquisa que atualiza a lista com base no nome do filme.
+2. **Favoritos:**
+   - Salvar filmes no Local Storage ao clicar em um botão.
+   - Recuperar e exibir os filmes salvos na página de Favoritos.
+   - Remover filmes da lista de favoritos.
+3. **Detalhes dos Filmes:**
+   - Exibição completa de informações obtidas pela API para um filme específico.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Estrutura do Projeto**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Componentes**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Header:**
+  - Barra de navegação com links para Home e Favoritos.
+- **Rotas:**
+  - Definidas usando `react-router-dom`.
+  - Rotas principais: `/`, `/filme/:id`, `/favoritos`, `/*` (página de erro).
+- **Páginas:**
+  - Home.
+  - Filme.
+  - Favoritos.
+  - Erro.
 
-## Learn More
+### **Funcionalidades com Axios**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Requisições para uma API de filmes usando `axios`.
+- Obtenção de:
+  - Lista de filmes.
+  - Detalhes de um filme pelo `id`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Local Storage**
 
-### Code Splitting
+- **Salvar Favoritos:**
+  - Filmes são armazenados no Local Storage com uma chave única.
+- **Exibir Favoritos:**
+  - Recuperar e renderizar os dados salvos na página de Favoritos.
+- **Excluir Favoritos:**
+  - Remover filmes da lista e atualizar o Local Storage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## **Tecnologias Utilizadas**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Frontend:**
 
-### Making a Progressive Web App
+- React.js.
+- React Router DOM.
+- Axios.
+- CSS para estilização (ou frameworks como Tailwind CSS/Bootstrap).
+- react-toastify.
+- react-loading-indicators.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **API Externa:**
 
-### Advanced Configuration
+- Integração com uma API de filmes (ex.: [The Movie Database API - TMDB](https://www.themoviedb.org/)).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### **Armazenamento Local:**
 
-### Deployment
+- Local Storage para salvar filmes favoritos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `yarn build` fails to minify
+## **Como Executar o Projeto**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/site-filmes-react.git
+
+2. Instale as dependências:
+    yarn add
+
+3. Configure a API:
+    -Crie uma conta no TMDB e obtenha sua chave de API.
+    -Substitua a chave de API no arquivo de configuração do projeto.
+    
+4. Inicie o servidor de desenvolvimento:
+    yarn start
